@@ -11,11 +11,11 @@ $this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => 'Posts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="post-view">
+<div class="post-view col-md-6">
 
     <h1><?= Html::encode($this->title) ?></h1>
    <?php if(Yii::$app->user->isGuest) { ?>
-       <?= ListView::widget([
+       <?= DetailView::widget([
            'model' => $model,
            'attributes' => [
                'id',
